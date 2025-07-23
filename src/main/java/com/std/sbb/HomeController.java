@@ -9,10 +9,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //아래에 이쓰는 GomeControoler 는 컨트롤러이다
 @Controller
 public class HomeController {
-    //만약에 home/main 이런 요청이 오면 아래 메서드를 실행해줘
+    int a = -1;
+
+
     @GetMapping("/home/main")
     @ResponseBody
     public String ShowMain() {
         return "안녕하세요";
     }
+
+    //만약에 home/main 이런 요청이 오면 아래 메서드를 실행해줘
+    @GetMapping("/home/increase")
+    @ResponseBody
+    public String ShowMain() {
+        a++;
+        return ("응답 : " + a);
+
+    }
+
 }
