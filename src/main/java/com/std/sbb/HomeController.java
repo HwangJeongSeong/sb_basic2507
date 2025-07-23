@@ -33,5 +33,20 @@ public class HomeController {
     public int plus(@RequestParam(value = "a", defaultValue = "0") int a, @RequestParam(value = "b", defaultValue = "0") int b){
         return a+b;
     }
+    @GetMapping("/home/minus")
+    @ResponseBody
+    public int minus(@RequestParam(value = "a", defaultValue = "0") int a, @RequestParam(value = "b", defaultValue = "0") int b){
+        return a-b;
+    }
+    @GetMapping("/home/multiply")
+    @ResponseBody
+    public int multipule(@RequestParam(value = "a", defaultValue = "0") int a, @RequestParam(value = "b", defaultValue = "0") int b){
+        return a*b;
+    }
+    @GetMapping("/home/devide")
+    @ResponseBody
+    public int devide(@RequestParam(value = "a", defaultValue = "0") int a, @RequestParam(value = "b", defaultValue = "0") int b){
+        return a/b;
+    }
 
 }
